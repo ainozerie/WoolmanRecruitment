@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Woolman Recruitment</title>
+    <meta name="description" content="Woolman Recruitment Task using HTML CSS Vanilla Javascript">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Woolman Recruitment Task</title>
 </head>
 <body>
-    Hello!
+    <header id="home">
+        <nav>
+            <ul>
+                <li>
+                    <a id="home" href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#description">Description</a>
+                </li>
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="fader">
+            <h1>Woolman Recruitment Task</h1>
+        </div>
+    </div>
+    <article id="description">
+        <h2>Description</h2>
+        <p>Welcome to explore a solution for Woolman Recruitment task!</p>
+        <p>This webpage was created using HTML, CSS and Vanilla Javasript. Both desktop and mobile versions look beautiful.</p>
+        <p>
+            Here you will see a wide range of different products that were fetched from BilleBeino shop. To not to overload page with information, 
+            only 50 products are displayed at a time. Other can be found by clicking 'Next' button.
+        </p>
+        <p>Have fun!</p>
+    </article>
+    <main id="products">
+        <div class="pageNavigation">
+            <button disabled id="previous">previous</button>
+            <p id="count">1</p>
+            <button id="next">next</button>
+        </div>
+        <div class="content">
+            <span class="loader"></span>
+        </div>
+    </main>
+    <footer>Copyright 2022. Developed by Sergei Ainozerov.</footer>
+    <script src="script.js"></script>
 </body>
 </html>
