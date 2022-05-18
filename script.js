@@ -5,6 +5,7 @@ const imgNotFoundUrl = 'https://mdcomplain.com/wp-content/uploads/2019/09/No_Ima
 
 const cardsContainer = document.querySelector('.content');
 const loader = document.querySelector('.loader');
+const topButton = document.querySelector('.topButton');
 
 let results;
 let counter = 0;
@@ -71,4 +72,11 @@ getData(url).then(products => {
     loader.remove();
     results = [...products]
     updateProducts(products);
-})
+});
+
+document.addEventListener('scroll', () => hideTopButton())
+
+const hideTopButton = () => {
+    window.scrollY > window.innerHeight ? topButton.classList.remove('hidden') : topButton.classList.add('hidden');
+    console.log(scrollY);
+};

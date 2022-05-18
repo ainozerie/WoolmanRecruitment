@@ -74,11 +74,28 @@ nav a, header p {
 nav ul li:first-child a{
     color: var(--accent);
 }
-nav a:hover {
+nav a:hover, .topButton a:hover {
     color: var(--accent);
 }
 header p {
     margin-right: var(--smallMargin);
+}
+.topButton {
+    position: fixed;
+    top: var(--gap);
+    right: calc(var(--gap) * 2);
+    width: 50px;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.topButton a {
+    text-decoration: none;
+    color: var(--grey);
+    font-family: Koulen;
+    font-size: 24px;
 }
 .hidden {
     display: none;
@@ -243,11 +260,18 @@ footer {
         --bigMargin: 10vw;
         --gap: 15px; 
     }
+    .topButton {
+        top: calc(var(--gap) * 2);
+    }
 }
 @media (max-width: 450px) {
     .card {
         width: var(--contentNarrow);
         height: fit-content;
         padding-bottom: 5px;
+    }
+    .topButton {
+        top: var(--gap);
+        right: var(--gap);
     }
 }
